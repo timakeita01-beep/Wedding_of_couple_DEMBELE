@@ -1,0 +1,8 @@
+.sparkles {
+  position: fixed;
+  inset: 0;
+  z-index: 110; /* above the envelope screen, below the photo lightbox */
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}

@@ -1,0 +1,101 @@
+.love {
+  background: linear-gradient(180deg, var(--ivory), var(--rose-soft) 55%, var(--ivory));
+  overflow: hidden;
+}
+
+.love__grid {
+  display: grid;
+  gap: clamp(1.5rem, 5vw, 2.75rem);
+  justify-items: center;
+  text-align: center;
+}
+
+.love__intro {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 36rem;
+}
+
+.love__quote {
+  position: relative;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(1.9rem, 7.5vw, 2.9rem);
+  line-height: 1.25;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.love__mark {
+  display: block;
+  font-size: 4.5rem;
+  line-height: 0.6;
+  color: var(--rose);
+  font-style: normal;
+}
+
+.love__media {
+  width: min(82vw, 420px);
+  padding-block: 20px; /* room for the parallax drift */
+}
+
+.love__frame {
+  position: relative;
+  padding: 10px;
+  background: var(--ivory);
+  box-shadow: var(--shadow-soft);
+}
+
+.love__frame::after {
+  content: '';
+  position: absolute;
+  inset: 22px -14px -14px 22px;
+  z-index: -1;
+  border: 1px solid rgba(179, 145, 89, 0.55);
+}
+
+.love__text {
+  display: grid;
+  gap: 1.25rem;
+  max-width: 32rem;
+  color: var(--ink-soft);
+  font-size: 1.075rem;
+  text-wrap: pretty;
+}
+
+.love__text .ornament {
+  margin-top: 1rem;
+}
+
+@media (min-width: 960px) {
+  .love__grid {
+    grid-template-columns: 420px 1fr;
+    grid-template-areas:
+      'media intro'
+      'media text';
+    column-gap: clamp(3rem, 7vw, 6rem);
+    row-gap: 2rem;
+    align-items: end;
+    justify-items: start;
+    text-align: left;
+  }
+
+  .love__media {
+    grid-area: media;
+    align-self: center;
+  }
+
+  .love__intro {
+    grid-area: intro;
+  }
+
+  .love__text {
+    grid-area: text;
+    align-self: start;
+  }
+
+  .love__text .ornament {
+    margin-inline: 0;
+  }
+}

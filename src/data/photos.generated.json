@@ -1,0 +1,47 @@
+{
+  "portrait-gris": {
+    "width": 896,
+    "height": 1195,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/photos/portrait-gris-480.webp"
+      },
+      {
+        "width": 896,
+        "src": "/photos/portrait-gris-896.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADwAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdABa/ZRjrt2x0upVAAN/BfmSdGsDhmFDHOL59MfSUIPHv5cWTjmfmN3HDXmHYRDW4GAQGgHdJkFOfHFUKF96h8LlT25Po0leAYeuRI+dQ0p9GEtXWwwYQAA=="
+  },
+  "portrait-rose": {
+    "width": 896,
+    "height": 1195,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/photos/portrait-rose-480.webp"
+      },
+      {
+        "width": 896,
+        "src": "/photos/portrait-rose-896.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JYgCdAB3zz5Hjsq18BgAAzgJBX9/CZ6e8r5dqcvsJW+x8sQ6UtjRw5h/b/bqBNW4zyFBgv115TQLCJCq7ds7sOOWforVUTasZ0teGu2uuwAMBkiBdzAHph4fCkndpcZTzPrEAAAA="
+  },
+  "portrait-tendre": {
+    "width": 896,
+    "height": 1195,
+    "sources": [
+      {
+        "width": 480,
+        "src": "/photos/portrait-tendre-480.webp"
+      },
+      {
+        "width": 896,
+        "src": "/photos/portrait-tendre-896.webp"
+      }
+    ],
+    "placeholder": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADQAwCdASoQABUAPu1iqU2ppaOiMAgBMB2JZACdABoa1GYsXFqeA8gA3NZ3vVf3WoKvhud2sgo+YfY24nAVi61+lgMAA8iKQGFm5MrFb5xfbwrgvJ4DVmrbdslFl8x5Xb0i2asNVakAEWTpP0UPMO1bCSMbtNbvWNwAAA=="
+  }
+}

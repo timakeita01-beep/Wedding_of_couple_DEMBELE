@@ -1,0 +1,195 @@
+.rsvp {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--rose-soft) 45%, var(--cream) 100%);
+  scroll-margin-top: 1rem;
+}
+
+.rsvp__title {
+  font-size: clamp(1.9rem, 7.5vw, 3rem);
+  max-width: 34rem;
+}
+
+.rsvp__deadline {
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.rsvp__form {
+  display: grid;
+  gap: 1.4rem;
+  padding: clamp(1.75rem, 6vw, 3rem);
+  border: 1px solid rgba(179, 145, 89, 0.3);
+  border-radius: 6px;
+  background: var(--ivory);
+  box-shadow: var(--shadow-soft);
+}
+
+.rsvp__row {
+  display: grid;
+  gap: 1.4rem;
+}
+
+@media (min-width: 560px) {
+  .rsvp__row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.rsvp__field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.rsvp__field label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.rsvp__optional {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+}
+
+.rsvp__field input,
+.rsvp__field textarea {
+  width: 100%;
+  min-height: 52px;
+  padding: 0.8rem 1rem;
+  border: 1px solid rgba(94, 82, 77, 0.28);
+  border-radius: 4px;
+  background: #fffdfa;
+  font-size: 1rem; /* ≥16px: prevents iOS zoom on focus */
+  line-height: 1.5;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    background-color 0.3s;
+}
+
+.rsvp__field textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.rsvp__field input::placeholder,
+.rsvp__field textarea::placeholder {
+  color: rgba(94, 82, 77, 0.6);
+}
+
+.rsvp__field input:hover,
+.rsvp__field textarea:hover {
+  border-color: rgba(94, 82, 77, 0.45);
+}
+
+.rsvp__field input:focus,
+.rsvp__field textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(179, 145, 89, 0.2);
+}
+
+.rsvp__field [aria-invalid='true'] {
+  border-color: #a0463c;
+}
+
+.rsvp__error,
+.rsvp__submit-error {
+  font-size: 0.85rem;
+  color: #9a3d33;
+}
+
+.rsvp__submit-error {
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  background: rgba(160, 70, 60, 0.07);
+}
+
+/* Guests stepper */
+.rsvp__stepper {
+  display: grid;
+  grid-template-columns: 52px 1fr 52px;
+  gap: 0.5rem;
+}
+
+.rsvp__stepper input {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.rsvp__stepper input::-webkit-inner-spin-button,
+.rsvp__stepper input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.rsvp__stepper button {
+  min-height: 52px;
+  border: 1px solid rgba(94, 82, 77, 0.28);
+  border-radius: 4px;
+  background: transparent;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.25s,
+    border-color 0.25s,
+    transform 0.2s;
+}
+
+.rsvp__stepper button:hover:not(:disabled) {
+  background: var(--rose-soft);
+  border-color: var(--rose);
+}
+
+.rsvp__stepper button:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.rsvp__stepper button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.rsvp__honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.rsvp__submit {
+  width: 100%;
+  margin-top: 0.5rem;
+  min-height: 56px;
+}
+
+.rsvp__spinner {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid rgba(251, 247, 241, 0.35);
+  border-top-color: var(--ivory);
+  border-radius: 50%;
+  animation: rsvp-spin 0.8s linear infinite;
+}
+
+@keyframes rsvp-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rsvp__demo-note {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--ink-soft);
+  opacity: 0.8;
+}

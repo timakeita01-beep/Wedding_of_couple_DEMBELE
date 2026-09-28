@@ -1,0 +1,128 @@
+.dates {
+  background: var(--ivory);
+}
+
+.dates__list {
+  position: relative;
+  display: grid;
+  gap: 1.75rem;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Connector between the two dates */
+.dates__list::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 50%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  opacity: 0.5;
+}
+
+.date-card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  padding: clamp(2.25rem, 8vw, 3rem) 1.5rem;
+  border: 1px solid rgba(179, 145, 89, 0.3);
+  border-radius: 999px 999px 6px 6px / 140px 140px 6px 6px;
+  background: var(--ivory);
+  text-align: center;
+}
+
+.date-card--featured {
+  background: linear-gradient(180deg, var(--cream), #f2e7d8);
+  border-color: rgba(179, 145, 89, 0.55);
+  box-shadow: var(--shadow-soft);
+}
+
+.date-card__numeral {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--gold-text);
+  margin-bottom: 0.5rem;
+}
+
+.date-card__date {
+  display: grid;
+  justify-items: center;
+}
+
+.date-card__weekday,
+.date-card__month {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  padding-left: 0.3em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.date-card__day {
+  font-family: var(--font-serif);
+  font-size: clamp(4.5rem, 20vw, 6rem);
+  font-weight: 400;
+  line-height: 1.05;
+  color: var(--ink);
+  margin: 0.2rem 0 0.4rem;
+}
+
+.date-card--featured .date-card__day {
+  color: var(--rose-deep);
+}
+
+.date-card__rule {
+  width: 36px;
+  height: 1px;
+  margin: 1.1rem 0 0.9rem;
+  background: var(--gold);
+}
+
+.date-card__title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 6.5vw, 2rem);
+  line-height: 1.2;
+  color: var(--ink);
+}
+
+.date-card__desc {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: var(--ink-soft);
+}
+
+.date-card__details {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-text);
+}
+
+@media (min-width: 760px) {
+  .dates__list {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: stretch;
+  }
+
+  .dates__list::before {
+    top: 50%;
+    bottom: auto;
+    left: 2rem;
+    right: 2rem;
+    width: auto;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  }
+}

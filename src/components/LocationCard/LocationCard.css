@@ -1,0 +1,62 @@
+.location-card {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.6rem;
+  height: 100%;
+  padding: 2.5rem 1.5rem 2rem;
+  border: 1px solid rgba(179, 145, 89, 0.3);
+  border-radius: 6px;
+  background: var(--ivory);
+  text-align: center;
+  transition:
+    transform 0.5s var(--ease-out),
+    box-shadow 0.5s var(--ease-out),
+    border-color 0.5s;
+}
+
+.location-card::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(179, 145, 89, 0.15);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .location-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(179, 145, 89, 0.55);
+    box-shadow: var(--shadow-soft);
+  }
+}
+
+.location-card__icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 0.4rem;
+  border-radius: 50%;
+  background: var(--rose-soft);
+  color: var(--rose-deep);
+}
+
+.location-card__title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(1.7rem, 7vw, 2rem);
+  line-height: 1.15;
+}
+
+.location-card__hint {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+
+.location-card__btn {
+  width: 100%;
+  max-width: 260px;
+}

@@ -1,0 +1,120 @@
+/* ───────────── Final section ───────────── */
+.final {
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 100%, rgba(185, 138, 130, 0.2), transparent 70%),
+    var(--night);
+  color: var(--cream);
+  overflow: hidden;
+}
+
+.final__inner {
+  display: grid;
+  justify-items: center;
+  gap: clamp(1.75rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.final__photo {
+  width: min(80vw, 420px);
+  padding: 10px;
+  border: 1px solid rgba(216, 192, 147, 0.35);
+  border-radius: 999px 999px 6px 6px / 150px 150px 6px 6px;
+}
+
+.final__photo .photo {
+  border-radius: 999px 999px 3px 3px / 140px 140px 3px 3px;
+}
+
+.final__text {
+  display: grid;
+  justify-items: center;
+  gap: 1.1rem;
+}
+
+.final__names {
+  display: grid;
+  gap: 0.6rem;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: clamp(2.5rem, 11vw, 4.2rem);
+  line-height: 1;
+  color: var(--ivory);
+}
+
+.final__names em {
+  color: var(--gold-light);
+}
+
+.final__family {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.38em;
+  padding-left: 0.38em;
+  text-transform: uppercase;
+  color: rgba(245, 238, 228, 0.75);
+}
+
+.final__date {
+  font-family: var(--font-serif);
+  font-size: clamp(1.4rem, 5.5vw, 1.8rem);
+  color: var(--gold-light);
+}
+
+.final__message {
+  max-width: 24rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+  line-height: 1.4;
+  color: var(--cream);
+  text-wrap: balance;
+}
+
+@media (min-width: 960px) {
+  .final__inner {
+    grid-template-columns: 420px 1fr;
+    align-items: center;
+    justify-items: start;
+    text-align: left;
+    max-width: 980px;
+  }
+
+  .final__text {
+    justify-items: start;
+  }
+
+  .final__text .ornament {
+    margin-inline: 0;
+  }
+}
+
+/* ───────────── Footer ───────────── */
+.footer {
+  display: grid;
+  justify-items: center;
+  gap: 0.35rem;
+  padding: 2.5rem var(--gutter) max(2.5rem, env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(216, 192, 147, 0.15);
+  background: var(--night);
+  color: rgba(245, 238, 228, 0.7);
+  text-align: center;
+}
+
+.footer__mono {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--gold-light);
+}
+
+.footer__line {
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.footer__note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+}
