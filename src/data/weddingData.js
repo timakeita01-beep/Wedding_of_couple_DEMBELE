@@ -10,10 +10,10 @@
 
 export const weddingData = {
   couple: {
-    groom: { firstName: 'Ibrahim', fullName: 'Ibrahim Dembélé' },
+    groom: { firstName: 'Ibrahima', fullName: 'Ibrahima Dembélé' },
     bride: { firstName: 'Fatoumata', fullName: 'Fatoumata Diarra' },
     /** Prénoms affichés en grand */
-    displayName: 'Ibrahim & Fatoumata',
+    displayName: 'Ibrahima & Fatoumata',
     /** Affiché sous les prénoms */
     coupleLabel: 'Couple Dembélé',
     monogram: 'I & F',
@@ -39,7 +39,7 @@ export const weddingData = {
     title: 'La célébration du mariage',
     /** Heure de début (HH:MM). Il n'y a volontairement pas d'heure de fin. */
     startTime: '08:00',
-    location: 'Diélibougou',
+    location: 'Djélibougou et Korofina',
   },
 
   locations: [
@@ -70,10 +70,10 @@ export const weddingData = {
     final: 'portrait-gris',
     gallery: ['portrait-rose', 'portrait-tendre', 'portrait-gris'],
     alt: {
-      'portrait-rose': 'Ibrahim et Fatoumata debout côte à côte devant un fond rose poudré.',
+      'portrait-rose': 'Ibrahima et Fatoumata debout côte à côte devant un fond rose poudré.',
       'portrait-tendre':
-        "Ibrahim et Fatoumata assis l'un contre l'autre, la main de Fatoumata posée sur l'épaule d'Ibrahim.",
-      'portrait-gris': 'Ibrahim et Fatoumata côte à côte, souriants, devant un fond gris.',
+        "Ibrahima et Fatoumata assis l'un contre l'autre, la main de Fatoumata posée sur l'épaule d'Ibrahima.",
+      'portrait-gris': 'Ibrahima et Fatoumata côte à côte, souriants, devant un fond gris.',
     },
   },
 
